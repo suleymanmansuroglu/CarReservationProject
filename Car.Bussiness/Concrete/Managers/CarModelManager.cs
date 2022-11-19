@@ -17,6 +17,11 @@ namespace Car.Bussiness.Concrete.Managers
             _carModelDal = carModelDal;
         }
 
+        public void Add(CarModel model)
+        {
+            _carModelDal.Add(model);
+        }
+
         public List<CarModel> GetAll()
         {
             return _carModelDal.GetList();

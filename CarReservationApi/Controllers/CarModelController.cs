@@ -36,5 +36,26 @@ namespace CarReservationApi.Controllers
             }
 
         }
+
+
+        [Route("AddCar")]
+        [HttpPost]
+        public IActionResult Add(CarModel model)
+        {
+            try
+            {
+
+                _carModelService.Add(model);
+                return new JsonResult(new CarJsonResult { Success = true, Message = "Başarılı" });
+
+            }
+            catch (Exception ex)
+            {
+                return new JsonResult(new CarJsonResult { Success = false, Message = ex.Message });
+
+            }
+
+        }
+
     }
 }

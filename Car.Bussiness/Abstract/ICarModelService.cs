@@ -10,5 +10,6 @@ namespace Car.Bussiness.Abstract
     public interface ICarModelService
     {
         List<CarModel> GetAll();
+        void Add (CarModel model);
     }
 }
